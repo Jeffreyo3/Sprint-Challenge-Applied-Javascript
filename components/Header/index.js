@@ -3,7 +3,7 @@
 // Using a function create the component you see below:
 //
 //  <div class="header">
-//    <span class="date">SMARCH 28, 2019</span>
+//    <span class="date">MARCH 28, 2019</span>
 //    <h1>Lambda Times</h1>
 //    <span class="temp">98°</span>
 //  </div >
@@ -21,8 +21,11 @@ function Header() {
     header.appendChild(headerOne);
     header.appendChild(temp);
 
-    //Set Contnet
-    date.textContent = 'SMARCH 28, 2019';
+    //Set Content
+        //Today's Date
+        var currentTime = new Date();
+
+    date.textContent = currentTime;
     headerOne.textContent = 'Lambda Times';
     temp.textContent = '98°';
 
