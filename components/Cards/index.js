@@ -24,39 +24,55 @@ axios
     .get("https://lambda-times-backend.herokuapp.com/articles")
     .then(response => {
         console.log(response);
-        const tabs = document.getElementsByClassName("tab");
-        console.log(tabs);
+        // const tabs = document.getElementsByClassName("tab");
+        // console.log(tabs);
+        
+        // const tabs = document.querySelectorAll('.tab');
 
-        tabs[0].addEventListener("click", e => {
-            cardContainer.innerHTML = "";
-            response.data.articles.javascript.forEach(item => {
-                cardContainer.appendChild(ArticleCreator(item));
-            });
-        });
-        tabs[1].addEventListener("click", e => {
-            cardContainer.innerHTML = "";
-            response.data.articles.bootstrap.forEach(item => {
-                cardContainer.appendChild(ArticleCreator(item));
-            });
-        });
-        tabs[2].addEventListener("click", e => {
-            cardContainer.innerHTML = "";
-            response.data.articles.technology.forEach(item => {
-                cardContainer.appendChild(ArticleCreator(item));
-            });
-        });
-        tabs[3].addEventListener("click", e => {
-            cardContainer.innerHTML = "";
-            response.data.articles.jquery.forEach(item => {
-                cardContainer.appendChild(ArticleCreator(item));
-            });
-        });
-        tabs[4].addEventListener("click", e => {
-            cardContainer.innerHTML = "";
-            response.data.articles.node.forEach(item => {
-                cardContainer.appendChild(ArticleCreator(item));
-            });
-        });
+        const tabName = document.getElementsByClassName('tabs');
+        tabName.event.addEventListener('dblclick', () => {console.log('hi')});
+
+        // function findArticles (tabName) {
+        //     for (i=0; i < tabs.length; i++) {
+        //         if (tabs[i] === tabName)
+        //     }
+        // }
+
+
+
+
+
+
+        // tabs[0].addEventListener("click", e => {
+        //     cardContainer.innerHTML = "";
+        //     response.data.articles.javascript.forEach(item => {
+        //         cardContainer.appendChild(ArticleCreator(item));
+        //     });
+        // });
+        // tabs[1].addEventListener("click", e => {
+        //     cardContainer.innerHTML = "";
+        //     response.data.articles.bootstrap.forEach(item => {
+        //         cardContainer.appendChild(ArticleCreator(item));
+        //     });
+        // });
+        // tabs[2].addEventListener("click", e => {
+        //     cardContainer.innerHTML = "";
+        //     response.data.articles.technology.forEach(item => {
+        //         cardContainer.appendChild(ArticleCreator(item));
+        //     });
+        // });
+        // tabs[3].addEventListener("click", e => {
+        //     cardContainer.innerHTML = "";
+        //     response.data.articles.jquery.forEach(item => {
+        //         cardContainer.appendChild(ArticleCreator(item));
+        //     });
+        // });
+        // tabs[4].addEventListener("click", e => {
+        //     cardContainer.innerHTML = "";
+        //     response.data.articles.node.forEach(item => {
+        //         cardContainer.appendChild(ArticleCreator(item));
+        //     });
+        // });
     });
 
 
@@ -93,3 +109,4 @@ function ArticleCreator(article) {
     //Return Component
     return card;
 };
+
