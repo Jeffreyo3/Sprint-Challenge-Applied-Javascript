@@ -23,9 +23,9 @@ function Header() {
 
     //Set Content
         //Today's Date
-        var currentTime = new Date();
+        // var currentTime = new Date();
 
-    date.textContent = currentTime;
+    date.textContent = 'SEPT 15, 2019';
     headerOne.textContent = 'Lambda Times';
     temp.textContent = '98°';
 
